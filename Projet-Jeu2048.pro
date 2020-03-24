@@ -16,10 +16,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    D:/centrale/2A/S8/C++/2048-master/core/grille.cpp \
+    grille.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    D:/centrale/2A/S8/C++/2048-master/core/grille.h \
+    grille.h \
     mainwindow.h
 
 FORMS += \
