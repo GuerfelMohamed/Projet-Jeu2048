@@ -41,6 +41,8 @@ Window {
 
     MenuForm {
         id: menuForm
+        x: 0
+        y: 0
         nGameButton.onClicked: {
             console.log("woow!");
         }
