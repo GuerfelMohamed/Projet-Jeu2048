@@ -15,6 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         board.cpp \
+        cell.cpp \
         main.cpp
 
 RESOURCES += qml.qrc
@@ -34,4 +35,4 @@ DISTFILES +=
 
 HEADERS += \
     board.h \
-    grid.h
+    cell.h
