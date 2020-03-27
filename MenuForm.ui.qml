@@ -28,29 +28,30 @@ Item {
         radius: 6
 
 
+        Text {
+            id: element1
+            x: 0
+            y: 0
+            width: 131
+            height: 42
+            text: qsTr("New Game")
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment: Text.AlignHCenter
+            font.pixelSize: 16
+        }
+
         MouseArea {
             id: newGameButton
             x: 0
             y: 0
             width: 131
             height: 42
-            hoverEnabled: true
-            enabled: false
+            hoverEnabled: false
+            enabled: true
             cursorShape: Qt.PointingHandCursor
             visible: true
-
-            Text {
-                id: element1
-                x: 0
-                y: 0
-                width: 131
-                height: 42
-                text: qsTr("New Game")
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
-                font.pixelSize: 16
-            }
         }
+
     }
 
     Rectangle {
