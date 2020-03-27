@@ -1,15 +1,16 @@
 import QtQuick 2.4
 
 Item {
-    width: 185
-    height: 89
+    width: 640
+    height: 480
     property alias nGameButton: newGameButton
+    property alias qGameButton: quitGameButton
 
     Text {
         id: gameName
-        x: 455
+        x: 460
         y: 0
-        width: 185
+        width: 180
         height: 89
         text: qsTr("2048")
         verticalAlignment: Text.AlignVCenter
@@ -20,18 +21,19 @@ Item {
 
     Rectangle {
         id: newGameRec
-        x: 503
+        x: 486
         y: 418
-        width: 109
+        width: 131
         height: 42
         color: "#8f5902"
         radius: 6
+
 
         Text {
             id: element1
             x: 0
             y: 0
-            width: 109
+            width: 131
             height: 42
             text: qsTr("New Game")
             verticalAlignment: Text.AlignVCenter
@@ -41,11 +43,16 @@ Item {
 
         MouseArea {
             id: newGameButton
-            width: 109
+            x: 0
+            y: 0
+            width: 131
             height: 42
+            hoverEnabled: false
+            enabled: true
             cursorShape: Qt.PointingHandCursor
             visible: true
         }
+
     }
 
     Rectangle {
@@ -70,8 +77,8 @@ Item {
         }
 
         Text {
-            id: element4
-            x: 22
+            id: scoreoutput
+            x: 23
             y: 28
             width: 21
             height: 24
@@ -84,7 +91,7 @@ Item {
 
     Rectangle {
         id: bestScoreBox
-        x: 558
+        x: 553
         y: 100
         width: 66
         height: 58
@@ -97,15 +104,15 @@ Item {
             y: 0
             width: 66
             height: 29
-            text: qsTr("Best")
+            text: qsTr("Meilleur")
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: 12
         }
 
         Text {
-            id: element5
-            x: 22
+            id: bestoutput
+            x: 23
             y: 28
             width: 21
             height: 24
@@ -113,6 +120,39 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: 15
+        }
+    }
+
+    Rectangle {
+        id: quitGameRec
+        x: 486
+        y: 356
+        width: 131
+        height: 42
+        color: "#8f5902"
+        radius: 6
+        Text {
+            id: element4
+            x: 0
+            y: 0
+            width: 131
+            height: 42
+            text: qsTr("Quit")
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: 16
+            horizontalAlignment: Text.AlignHCenter
+        }
+
+        MouseArea {
+            id: quitGameButton
+            x: 0
+            y: 0
+            width: 131
+            height: 42
+            cursorShape: Qt.PointingHandCursor
+            enabled: true
+            hoverEnabled: false
+            visible: true
         }
     }
 }
