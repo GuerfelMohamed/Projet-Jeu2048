@@ -10,11 +10,11 @@ class Board : public QObject
 public:
     explicit Board(QObject *parent = nullptr);
     //~Board();
-       /* Q_INVOKABLE void moveUp();
+   /*  Q_INVOKABLE void moveUp();
     Q_INVOKABLE void moveDown();
     Q_INVOKABLE void moveRight();
     Q_INVOKABLE void moveLeft();
-    Q_INVOKABLE void newGame();
+       Q_INVOKABLE void newGame();
 
     Q_PROPERTY(int posX READ readPosX NOTIFY CellChanged)
     int readPosX();
