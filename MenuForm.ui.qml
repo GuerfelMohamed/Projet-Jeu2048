@@ -4,6 +4,7 @@ Item {
     width: 640
     height: 480
     property alias nGameButton: newGameButton
+    property alias qGameButton: quitGameButton
 
     Text {
         id: gameName
@@ -20,7 +21,7 @@ Item {
 
     Rectangle {
         id: newGameRec
-        x: 485
+        x: 486
         y: 418
         width: 131
         height: 42
@@ -119,6 +120,39 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.pixelSize: 15
+        }
+    }
+
+    Rectangle {
+        id: quitGameRec
+        x: 486
+        y: 356
+        width: 131
+        height: 42
+        color: "#8f5902"
+        radius: 6
+        Text {
+            id: element4
+            x: 0
+            y: 0
+            width: 131
+            height: 42
+            text: qsTr("Quit")
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: 16
+            horizontalAlignment: Text.AlignHCenter
+        }
+
+        MouseArea {
+            id: quitGameButton
+            x: 0
+            y: 0
+            width: 131
+            height: 42
+            cursorShape: Qt.PointingHandCursor
+            enabled: true
+            hoverEnabled: false
+            visible: true
         }
     }
 }

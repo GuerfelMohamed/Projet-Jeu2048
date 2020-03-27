@@ -9,7 +9,7 @@ class Board : public QObject
     Q_OBJECT
 public:
     explicit Board(QObject *parent = nullptr);
-    ~Board();
+    //~Board();
        /* Q_INVOKABLE void moveUp();
     Q_INVOKABLE void moveDown();
     Q_INVOKABLE void moveRight();

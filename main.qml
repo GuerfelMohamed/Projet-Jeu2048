@@ -44,7 +44,12 @@ Window {
         x: 0
         y: 0
         nGameButton.onClicked: {
-            console.log("woow!");
+            console.log("new");
+        }
+        qGameButton.onClicked: {
+            console.log("quit");
+            Qt.quit();
+
         }
     }
 
