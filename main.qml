@@ -19,23 +19,29 @@ Window {
 
         GrilleForm {
             id: grilleForm
+            anchors.fill: parent
+            focus: true
+            Keys.onPressed: {
+                    if (event.key == Qt.Key_Left) {
+                        console.log("move left");
+                        event.accepted = true;
+                    }
+                    if (event.key == Qt.Key_Right) {
+                        console.log("move right");
+                        event.accepted = true;
+                    }
+                    if (event.key == Qt.Key_Up) {
+                        console.log("move up");
+                        event.accepted = true;
+                    }
+                    if (event.key == Qt.Key_Down) {
+                        console.log("move down");
+                        event.accepted = true;
+                    }
+                }
+
         }
-        Keys.onPressed: {
-            switch (event.Key) {
-            case Qt.Key_Up:
-                console.log("up");
-                break;
-            case Qt.Key_Down:
-                console.log("Down");
-                break;
-            case Qt.Key_Right:
-                console.log("right");
-                break;
-            case Qt.Key_Left:
-                console.log("left");
-                break;
-            }
-        }
+
 
     }
 
