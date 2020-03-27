@@ -13,13 +13,11 @@ class Board : public QObject
     Q_OBJECT
 public:
     explicit Board(QObject *parent = nullptr);
-<<<<<<< HEAD
+
     ~Board();
-    Q_INVOKABLE void moveUp();
-=======
     //~Board();
    /*  Q_INVOKABLE void moveUp();
->>>>>>> ac4fee99eb31f21b540141e6b3389bc64dda97e1
+
     Q_INVOKABLE void moveDown();
     Q_INVOKABLE void moveRight();
     Q_INVOKABLE void moveLeft();
@@ -34,7 +32,7 @@ public:
     Q_PROPERTY(int score READ readScore NOTIFY CellChanged)
     int readScore();
     Q_PROPERTY(int bestscore READ readBestScore NOTIFY CellChanged)
-    int readBestScore();
+    int readBestScore();*/
 
 
 signals:
