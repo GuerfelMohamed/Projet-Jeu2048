@@ -1,6 +1,6 @@
 #include "cell.h"
 
-Cell::Cell()
+Cell::Cell(int x)
 {
-
+    this->CellNb=x;
 }

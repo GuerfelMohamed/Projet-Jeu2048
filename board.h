@@ -2,14 +2,18 @@
 #define BOARD_H
 
 #include <QObject>
+#include <fstream>
+#include <QDebug>
+#include <vector>
 #include "cell.h"
+using namespace std;
 
 class Board : public QObject
 {
     Q_OBJECT
 public:
     explicit Board(QObject *parent = nullptr);
-   /* ~Board();
+    ~Board();
     Q_INVOKABLE void moveUp();
     Q_INVOKABLE void moveDown();
     Q_INVOKABLE void moveRight();
@@ -25,28 +29,32 @@ public:
     Q_PROPERTY(int score READ readScore NOTIFY CellChanged)
     int readScore();
     Q_PROPERTY(int bestscore READ readBestScore NOTIFY CellChanged)
-    int readBestScore();*/
+    int readBestScore();
 
 
 signals:
-    //void CellChanged();
+    void CellChanged();
 private:
-   // int score;
-   // int bestScore;
-   // Cell*** cells;
+    int score;
+    int bestScore;
+    Cell*** cells;
+    Cell** QmlGrid;
+    fstream historique;
 
-   // void createNewCell();
-   // void createCells();
-   // void deleteCells();
+    void createNewCell();
+    void createCells();
+    void deleteCells();
 
-   // void verifyRight();
-   // void verifyLeft();
-   // void verifyUp();
-   // void verifyDown();
+    void verifyRight();
+    void verifyLeft();
+    void verifyUp();
+    void verifyDown();
 
-   // void scoreInc(int x);
-   // void loadGame();
-   // void saveGame();
+    void scoreInc(int x);
+    void loadGame();
+    void saveGame();
+
+
 
 
 

@@ -5,7 +5,9 @@
 class Cell
 {
 public:
-    Cell();
+    Cell(int x=0);
+private:
+   int CellNb;
 };
 
 #endif // CELL_H
