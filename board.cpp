@@ -8,7 +8,7 @@ Board::Board(QObject *parent) : QObject(parent)
     this->bestScore=atoi(bestScore_Input.c_str());
     historique.close();
     createCells();
-    newGame();
+    //newGame();
     qDebug() << "game starting...";
     CellChanged();
 
@@ -19,6 +19,8 @@ Board::~Board(){
     //delete cells
     qDebug() << "end of game";
 }
+
+/*
 void Board::newGame(){
     this->score=0;
     deleteCells();
@@ -104,5 +106,6 @@ int Board::readBestScore(){
 int Board::readScore(){
     return score;
 }
+*/
 
 
