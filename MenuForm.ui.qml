@@ -52,7 +52,6 @@ Item {
             cursorShape: Qt.PointingHandCursor
             visible: true
         }
-
     }
 
     Rectangle {

@@ -22,32 +22,28 @@ Window {
             anchors.fill: parent
             focus: true
             Keys.onPressed: {
-                    if (event.key == Qt.Key_Left) {
-                        console.log("move left");
-                        board.moveLeft();
-                        event.accepted = true;
-
-                    }
-                    if (event.key == Qt.Key_Right) {
-                        console.log("move right");
-                        board.moveRight();
-                        event.accepted = true;
-                    }
-                    if (event.key == Qt.Key_Up) {
-                        console.log("move up");
-                        board.moveUp();
-                        event.accepted = true;
-                    }
-                    if (event.key == Qt.Key_Down) {
-                        console.log("move down");
-                        board.moveDown();
-                        event.accepted = true;
-                    }
+                if (event.key === Qt.Key_Left) {
+                    console.log("move left");
+                    board.moveLeft();
+                    event.accepted = true;
                 }
-
+                if (event.key === Qt.Key_Right) {
+                    console.log("move right");
+                    board.moveRight();
+                    event.accepted = true;
+                }
+                if (event.key === Qt.Key_Up) {
+                    console.log("move up");
+                    board.moveUp();
+                    event.accepted = true;
+                }
+                if (event.key === Qt.Key_Down) {
+                    console.log("move down");
+                    board.moveDown();
+                    event.accepted = true;
+                }
+            }
         }
-
-
     }
 
     MenuForm {
@@ -63,5 +59,4 @@ Window {
 
         }
     }
-
 }

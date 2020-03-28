@@ -9,9 +9,9 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
-    Board board;
+    QScopedPointer<Board> board (new Board);
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("board", &board);
+    engine.rootContext()->setContextProperty("board", board.data());
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 
     return app.exec();

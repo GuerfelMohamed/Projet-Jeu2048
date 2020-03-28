@@ -16,7 +16,7 @@ public:
 
     ~Board();
     //~Board();
-   /*  Q_INVOKABLE void moveUp();
+   Q_INVOKABLE void moveUp();
 
     Q_INVOKABLE void moveDown();
     Q_INVOKABLE void moveRight();
@@ -32,8 +32,7 @@ public:
     Q_PROPERTY(int score READ readScore NOTIFY CellChanged)
     int readScore();
     Q_PROPERTY(int bestscore READ readBestScore NOTIFY CellChanged)
-    int readBestScore();*/
-
+    int readBestScore();
 
 signals:
     void CellChanged();
@@ -56,10 +55,6 @@ private:
     void scoreInc(int x);
     void loadGame();
     void saveGame();
-
-
-
-
 
 };
 
